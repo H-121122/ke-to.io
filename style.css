@@ -1,44 +1,48 @@
-body {
-    font-family: Arial, sans-serif;
+/* CSSリセット（シンプルなバージョン） */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #F8F8F8;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+
+p {
+    color: #666;
+    margin: 10px 0;
+}
+
+/* ギャラリーのスタイル */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
-    width: 90%;
-    max-width: 1200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: white;
-    border-radius: 10px;
 }
 
-.image-item {
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.image-item a {
-    display: block;
-}
-
-.image-item img {
-    width: 100%;
+.gallery img {
+    width: 200px;
     height: auto;
-    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
